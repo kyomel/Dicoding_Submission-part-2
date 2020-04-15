@@ -3,47 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zodiak Kamu</title>
+    <title>COVID-19 Data</title>
 </head>
 <body>
     <div class="container">
         <header>
             <div class="row">
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark col-12">
-                <a class="navbar-brand" href="#">Zodiak Kamu</a>
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark col-md-12">
+                <p class="navbar-brand" href="#">Pemantau COVID-19</p>
             </nav>
             </div>
         </header>
 
         <div class="row">
-            <div class="card">
-                <div class="card-header" style="background-color: beige;">
-                    <h5 class="card-title">Masukkan Data Kamu</h5>
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
-                        <label for="inputNama">Nama Lengkap</label>
-                        <input id="inputNama" type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputLahir">Tanggal Lahir</label>
-                        <input id="inputLahir" type="date" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <button id="buttonTampil" class="btn btn-success">OK</button>
-                    </div>
-                </div>
+            <div class="col-md-12" style="background-color: darkgrey; color: white;">
+                <marquee scrollamount="5"><p>Website ini mengecek status COVID-19 di setiap Negara, stay safe everyone!</p></marquee>
             </div>
         </div>
 
-        <p id="zodiakHasil"></p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card-responsive">
+                    <div class="card-header" style="background-color:beige;">
+                        <h5 class="card-title">Masukkan Nama Negara</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="inputNegara">Negara</label>
+                            <input id="inputNegara" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <button id="buttonTampil" class="btn btn-success">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="listCountry"></div>
+            
+        </div>
 
         <div class="row">
-            <footer class="page-footer font-small blue bg-dark col-12">
+            <footer class="page-footer font-small blue bg-dark col-md-12">
                 <div class="footer-copyright text-center py-3 text-white">Dicoding Submission ©2020</div>
             </footer>
         </div>
     </div>
-    <script type="modul" src="./src/index.js"></script>
+    <script type="modul" src="index.js"></script>
 </body>
 </html>
